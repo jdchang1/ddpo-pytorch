@@ -79,9 +79,11 @@ def main(_):
     )
     if accelerator.is_main_process:
         accelerator.init_trackers(
-            project_name="ddpo-pytorch",
+                #project_name="ddpo-pytorch",
+                #project_name="full_aesthetic",
+            project_name=config.project_name,
             config=config.to_dict(),
-            init_kwargs={"wandb": {"name": config.run_name}},
+            init_kwargs={"wandb": {"name": config.run_name, "entity": config.entity_name}},
         )
     logger.info(f"\n{config}")
 

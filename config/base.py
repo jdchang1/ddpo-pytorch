@@ -7,6 +7,8 @@ def get_config():
     ###### General ######
     # run name for wandb logging and checkpoint saving -- if not provided, will be auto-generated based on the datetime.
     config.run_name = ""
+    config.project_name=""
+    config.entity_name=""
     # random seed for reproducibility.
     config.seed = 42
     # top-level logging directory for checkpoint saving.
